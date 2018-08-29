@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu May 24 11:39:20 2018
+# Process ID: 3416
+# Current directory: C:/Users/arthur/Documents/GitHub/Cora-Z7/Cora-Z7-10-Basic-IO/proj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16900 C:\Users\arthur\Documents\GitHub\Cora-Z7\Cora-Z7-10-Basic-IO\proj\Cora-Z7-10-Basic-IO.xpr
+# Log file: C:/Users/arthur/Documents/GitHub/Cora-Z7/Cora-Z7-10-Basic-IO/proj/vivado.log
+# Journal file: C:/Users/arthur/Documents/GitHub/Cora-Z7/Cora-Z7-10-Basic-IO/proj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/arthur/Documents/GitHub/Cora-Z7/Cora-Z7-10-Basic-IO/proj/Cora-Z7-10-Basic-IO.xpr
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+archive_project C:/Users/arthur/Documents/GitHub/Cora-Z7/Cora-Z7-10-Basic-IO/Cora-Z7-10-Basic-IO.xpr.zip -temp_dir C:/Users/arthur/Documents/GitHub/Cora-Z7/Cora-Z7-10-Basic-IO/proj/.Xil/Vivado-3416-WK142 -force -include_local_ip_cache
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/arthur/Documents/GitHub/Cora-Z7/Cora-Z7-10-Basic-IO/proj/Cora-Z7-10-Basic-IO.runs/impl_1/top.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/arthur/Documents/GitHub/Cora-Z7/Cora-Z7-10-Basic-IO/proj/Cora-Z7-10-Basic-IO.runs/impl_1/top.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+archive_project C:/Users/arthur/Documents/GitHub/Cora-Z7/Cora-Z7-10-Basic-IO/Cora-Z7-10-Basic-IO.xpr.zip -temp_dir C:/Users/arthur/Documents/GitHub/Cora-Z7/Cora-Z7-10-Basic-IO/proj/.Xil/Vivado-3416-WK142 -force -include_local_ip_cache
