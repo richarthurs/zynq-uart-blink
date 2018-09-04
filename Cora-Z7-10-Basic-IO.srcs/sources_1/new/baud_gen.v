@@ -29,12 +29,22 @@ module baud_gen#(
     input wire clk,
     output wire baud_clk
     );
-    
-    reg[BAUD_ACC_W:0] baud_accumulator;
+    reg[12:0] counter = 0;
+    localparam[31:0] baud_time = 125000000/115200;
+     reg tick = 0;
+   // reg[BAUD_ACC_W:0] baud_accumulator;
     
     always@(posedge clk)
-      baud_accumulator <= baud_accumulator[BAUD_ACC_W-1:0] + BAUD_GEN_INC;
-  
-    assign baud_clk = baud_accumulator[BAUD_ACC_W]; 
+        
+        
+        if(counter == baud_time) begin
+         tick <= 1;
+         counter <= 0;
+         end
+        else begin 
+            tick <= 0;
+            counter <= counter + 1;
+        end
+    assign baud_clk = tick; //baud_accumulator[BAUD_ACC_W]; 
     
 endmodule

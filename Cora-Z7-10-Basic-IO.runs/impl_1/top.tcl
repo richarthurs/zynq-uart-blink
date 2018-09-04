@@ -68,16 +68,16 @@ set rc [catch {
   set_param xicom.use_bs_reader 1
   set_param board.repoPaths /home/richard/fpga/vivado-boards-master/new/board_files
   create_project -in_memory -part xc7z010clg400-1
-  set_property board_part_repo_paths /home/richard/fpga/Cora-Z7-10-Basic-IO/Cora-Z7-10-Basic-IO.board [current_project]
+  set_property board_part_repo_paths /home/richard/fpga/fpga-uart/Cora-Z7-10-Basic-IO.board [current_project]
   set_property board_part digilentinc.com:cora-z7-10:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir /home/richard/fpga/Cora-Z7-10-Basic-IO/Cora-Z7-10-Basic-IO.cache/wt [current_project]
-  set_property parent.project_path /home/richard/fpga/Cora-Z7-10-Basic-IO/Cora-Z7-10-Basic-IO.xpr [current_project]
-  set_property ip_output_repo /home/richard/fpga/Cora-Z7-10-Basic-IO/Cora-Z7-10-Basic-IO.cache/ip [current_project]
+  set_property webtalk.parent_dir /home/richard/fpga/fpga-uart/Cora-Z7-10-Basic-IO.cache/wt [current_project]
+  set_property parent.project_path /home/richard/fpga/fpga-uart/Cora-Z7-10-Basic-IO.xpr [current_project]
+  set_property ip_output_repo /home/richard/fpga/fpga-uart/Cora-Z7-10-Basic-IO.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet /home/richard/fpga/Cora-Z7-10-Basic-IO/Cora-Z7-10-Basic-IO.runs/synth_1/top.dcp
-  read_xdc /home/richard/fpga/Cora-Z7-10-Basic-IO/Cora-Z7-10-Basic-IO.srcs/constrs_1/imports/xdc/Cora-Z7-10-Master.xdc
+  add_files -quiet /home/richard/fpga/fpga-uart/Cora-Z7-10-Basic-IO.runs/synth_1/top.dcp
+  read_xdc /home/richard/fpga/fpga-uart/Cora-Z7-10-Basic-IO.srcs/constrs_1/imports/xdc/Cora-Z7-10-Master.xdc
   link_design -top top -part xc7z010clg400-1
   close_msg_db -file init_design.pb
 } RESULT]
